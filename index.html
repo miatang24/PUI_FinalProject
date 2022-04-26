@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+	<title>StickMyStress</title>
+	<meta charset="UTF-8">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+
+   <!-- styles -->
+    <link rel="stylesheet" href="index.css">
+   <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&family=Klee+One&family=Nunito&family=Poppins:wght@100;200;300&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+
+
+
+<body>
+    <header class="header">
+        <p class="app_name">StickMyStress</p>
+        <!-- <nav>
+            <div class="container">
+            <ul>
+    
+                <li><a href="#home">Home</a></li>
+                <li><a href="#write">Write</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+            </div>
+        </nav>         -->
+        <div id="nav">
+            <ul>
+                <li><a href="#home">Home</a>
+                </li>
+                <li><a href="#write">StickStress</a>
+                </li>
+                <li><a href="#resources">WhatsMore</a>
+
+            </ul>
+        </div>
+
+    </header>
+    <div id="content">
+        <section id="home">
+            <h1 class="section-title">Home</h1>
+            <div id="introduce"> 
+                <div id='orange'><img src="orange.png" id="orange-img"></div>
+                <div id="bubble">
+                    <img src="bubble.png" id="bubble-img">  
+                    <h3 id="caption">Relax...what's on your mind?</h1>
+                        <div class="button">
+                            <button id="start" class="btn" onclick="window.location.href='#write'" > Start </button>
+                            <!-- <button class="btn button-save" >SAVE</button> -->
+                            </div>
+                </div>
+        </div>
+<!--      <p class="subtitle">Welcome to my website!</p> -->
+
+        </section>
+
+        <section id="write">
+            <h1 class="section-title">Home</h1>
+            <h2 id="score">    <h2>
+           
+            <h2 id="mood-score"></h2>
+
+                <div class="buttons">
+                    <button id="add" class="btn button-new" onclick="newNote()"> Add Note </button>
+                    <!-- <button class="btn button-save" >SAVE</button> -->
+                    </div>
+        
+            
+            <div class="notes" id="notes">
+                <audio id="audio-add" src="add.mp3" autoplay="false"></audio>
+                <audio id="audio-delete" src="delete.mp3" autoplay="false"></audio>
+                <!-- <div class="note">
+                    <input type="text" placeholder="Today's Date..." class="title"/>
+
+                    <textarea class="content" placeholder="I'm worried about..."></textarea>
+                   -->
+                </div>
+            </div>
+
+       
+        </section>
+
+
+        <section id="resources">
+            <h1>6 small things to get unstuck from worry</h1>
+          
+                <div class="row">
+                    <div class="column">
+                        <h4>✏️ Write it out </h4>
+                        <br/>
+                        <p> A stress journal can help you identify the regular stressors in your life and the way you deal with them. Write down the cause, your thoughts, and your mood. If you haven't done so already, scroll up and use the sticky notes to write them down.</p>
+            
+                    <!-- <h4>Disappoint People</h4>
+                    <p>Dealing with disappointment is part of simplifying your life. To simplify is to disappoint others and that’s okay. They are disappointed in their priorities, not being met by the allocation of your time.</p>
+                -->
+                    </div>
+                    <div class="column">
+                    
+                        <h4>📖 Escape into a book </h4>
+                        <br/>
+                        <p>Is the real world too much to handle? Disappear into a hot bodice ripper, blood-pumping thriller, or maybe a faraway epic fantasy. A great read can take your mind off your worries.</p>
+                
+                        <!-- <h4>Write down your stress</h4>
+                        <p>uptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit amet consectetur adipis</p> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column" >
+                        <h4>🚶‍♀️ Take a walk outside</h4>
+                        <br/>
+                        <p>Increasing your time outside (which could be as simple as taking a walk) will likely do wonders for your mood and outlook on life. Get outside of the building and take a quick walk to your favorate Boba shop might be a brilliant idea!</p>
+            
+                    
+                    </div>
+
+                    <div class="column">
+                        <h4>🧘‍♀️ Allow white space into your calendar </h4>
+                        <br/>
+                        <p>Bring back the white space to your life and set a repetitive timer for deep breathing or meditation. In fact, meditation has been scientifically proven to help alleviate stress after just eight weeks of regular practice.
+                        </p>
+                    
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column" >
+                        <h4>🙆 Don't be afraid of making mistakes </h4>
+                        <br/>
+                        <p>Avoiding mistakes does not lead to fewer mistakes , but creates unnecessary pressure and stress. Remember that people are too busy to care about your mistakes and life is too short to worry about what other think of you. </p>
+                    
+                    
+                    </div>
+
+                    <div class="column">
+                        <h4>🛀 Take a hot bath</h4>
+                        <br/>
+                        <p>The answer to washing away a day of stress may be in your bathroom. Hot water is known to help release endorphins and increase blood flow to the skin. Warm baths can also improve breathing，reduce risk of heart attack
+                            and lower blood pressure.
+                          
+                        </p>
+                    
+                    </div>
+                </div>
+            
+
+
+
+            
+        </section>
+    </div>
+
+
+    <script src="index.js"></script>
+</body>
+

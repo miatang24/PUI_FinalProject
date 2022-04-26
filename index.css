@@ -1,0 +1,412 @@
+html { scroll-behavior: smooth;}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+}
+/* three main sections */
+
+.section-title{
+
+    color:transparent;
+}
+#home{
+
+    min-width:500px;
+    min-height:500px;
+    overflow:hidden;
+    /* background-color: black; */
+    /* background-color: #F5F2ED; */
+    background-image: url("light-bg.png");
+    background-repeat:no-repeat;
+    background-size: cover;
+
+}
+#write {
+    padding-top:50px;
+    /* background-color: aquamarine; */
+    min-height: 100vh;
+    width: 100%;
+
+}
+
+#resources{
+    padding-top:60px;
+   
+    background-repeat: none;
+    background-size: cover;
+    background-image: url("light-bg.png");
+}
+
+/* nav bar */
+
+.header{
+    top:0;
+    z-index:999;
+    position: sticky;
+    /* background-image: url("header.png"); */
+    background-size:  auto 180px;
+    background-repeat: no-repeat;
+    color:#3D3D3D;     
+    background-color:transparent;
+    width:100%;
+    height:100px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+
+}
+/* logo */
+.app_name {
+    
+    font-family: 'Caveat', cursive; 
+    font-size:30px;
+    font-weight:400;
+    /* background-color: yellow; */
+    padding: 0px 20px;
+
+}
+
+/* menu */
+#nav {
+    position: absolute;
+    left: 0px;
+    height: 40px;
+    width: 100%;
+    margin: 0 auto;
+}
+#nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+}
+#nav ul li {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+#nav ul li a {
+    font-family: 'Poppins', sans-serif;
+    letter-spacing:0.5px;
+    font-size: 18px;
+    text-decoration: none;
+    padding: 0px 40px;
+    display: block;
+    color: #2D2D2D;
+    text-align: center;
+    transition: transform 250ms;
+}
+
+#nav ul li a:hover:before{
+    opacity:0;
+    transition: all .2s ease; 
+    background-image: url("highlight.png");
+    color:black;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+
+#nav ul li a:hover{
+    /* color:rgb(255, 194, 74); */
+    transform: rotate(2deg);
+    transition: all .2s ease; 
+    background-image: url("highlight.png");
+    /* color:black; */
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+/* home page */
+#introduce{
+    display: flex;
+}
+#orange{
+/* margin-top: 70px; */
+min-width:400px;
+min-height:500px;
+    width: 40%;
+    /* background-color: blue; */
+    float:left;
+
+}
+
+
+
+#mood-score{
+    padding-left:30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    color: #171717;
+}
+#orange-img{
+    width:100%;
+}
+
+#bubble {
+    min-width: 400px;
+    /* background-color: yellow; */
+height:100%;
+    position:relative;
+    width:45%;
+    margin:0 auto;
+    float:right;
+}
+
+#bubble-img{
+    width:100%;
+/* background-color: red; */
+}
+
+/* caption */
+
+:root {
+    --bg-color: white;
+    --typewriterSpeed: 3s;
+    --typewriterCharacters: 24;
+  }
+  
+  
+  h3 {
+    font-family: 'Poppins', sans-serif;
+    font-weight:200 ;
+    position: absolute;
+    top:34%;
+    width:85%;
+    text-align: center;
+    /* background-color: yellow; */
+    font-size:2.5vw;
+    /* font-family: 'Poppins', sans-serif;; */
+    left:5.8%;
+}
+  
+  h3::before,
+  h3::after {
+
+    /* content: "";
+    position: absolute;
+    top:30%;
+    width:100%;
+    text-align: center; */
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    
+  }
+  
+  h3::before {
+    background: var(--bg-color);
+    animation: typewriter var(--typewriterSpeed)
+      steps(var(--typewriterCharacters)) 1s forwards;
+  }
+  
+  .subtitle {
+    color: hsl(0 0% 0% / 0.7);
+    font-size: 2rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) +3s) forwards;
+  }
+
+/* start button */
+.button{
+    height:45px;
+}
+#start {
+    opacity:0;
+    transform: translateY(3rem);
+    animation: fadeInUp 2s ease calc(var(--typewriterSpeed) + 0.4s) forwards;
+    width: 130px;
+    height:100%;
+    margin: 0 auto; 
+    display: block;
+}
+  
+  @keyframes typewriter {
+    to {
+      left: 100%;
+    }
+  }
+  
+  @keyframes blink {
+    to {
+      background: transparent;
+    }
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  #yt-link {
+    position: absolute;
+    bottom: 2em;
+    width: 100%;
+    color: hsl(0 0 0 / 0.7);
+  
+    &:hover,
+    &:focus {
+      color: teal;
+    }
+  }
+  /*add note button  */
+.buttons {
+    /* background-color: green; */
+    height:100px;
+    left: 60px;
+    top: 30px;
+    position:relative;
+    width:20%;
+    align-items: center;
+    justify-content: center;
+    column-gap:20px;
+}
+
+/* From uiverse.io by @adamgiebl */
+.btn {
+
+    font-family: 'Klee One', cursive;;
+    padding: 7px 35px;
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: black;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.2s;
+    border-radius: 5px;
+    border: 1.5px solid black;
+    border-radius: 5px;
+    box-shadow: inset 0 0 0 0 black;
+   }
+   
+   .btn:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 black;
+   }
+   
+   .btn:active {
+    transform: scale(0.9);
+   }
+
+   /* Notes */
+.notes{
+    width:100%;
+    display:flex;
+    padding-left: 50px;
+    padding-top: 10px;
+    flex-wrap: wrap;
+    column-gap: calc(15%/3);
+    row-gap:20px;
+}
+
+.note{
+    background-image: url("note.png"); 
+    background-size:250px 250px; 
+    border-radius: 5px;
+    /* background-color:#ffdca4; */
+    /* background-color:#fff19f;
+   */
+    height:250px;
+    width:250px;
+
+    /* background-color:pink; */
+    padding:20px;
+
+}
+
+.note:hover{
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -o-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+
+    -webkit-transition: transform 0.3s ease-in-out;
+    -moz-transition:transform 0.3s ease-in-out;
+    -ms-transition:transform 0.3s ease-in-out;
+}
+
+.title{
+    font-family: 'Klee One', cursive;
+    margin-top:20px;
+    margin-left:10px;
+    width:100%;
+    height:20px;
+    font-size:20px;
+    border:none;
+    background-color: transparent;
+    outline:none;
+    
+}
+
+.content{
+    font-family: 'Klee One', cursive;
+    
+    margin-left:10px;
+    width:100%;
+    height:150px;
+    border:none;
+    background-color: transparent;
+    outline:none;
+    margin-top: 10px;
+    resize: none;
+}
+
+.bin{
+    position:relative;
+    /* right:100px; */
+    width: 23px;
+    bottom:2%;
+    left:95%;
+    height: auto;
+    cursor: pointer;
+}
+
+.bin:hover{
+    transform-origin: center;
+    transform: scale(1.1);
+}
+
+/* tips section */
+
+#resources h1 {
+    font-weight: 250;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+h4 {
+    font-size: 18px;
+}
+
+
+.row {
+    display: flex;
+    margin:50px;
+    justify-content: center;
+
+  }
+  
+  .column {
+    font-size:15px;
+    flex: 50%;
+    padding: 10px;
+
+  }
+
