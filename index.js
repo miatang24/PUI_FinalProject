@@ -129,9 +129,9 @@ function displayscore(){
     // if (allnotes.includes("worry")){
     // }
     if (score>=0.8| score==0.6535733342170715) {
-        mood=' 🫠 Feeling good so far'
+        mood=' 🙂️ Feeling good so far'
     } else if(score>=0.5){
-        mood=' 🫥 A little stressed for sure :|'
+        mood=' 🫤 A little stressed for sure'
     } else{
         mood= '📞 Crisis Support Services 1-800-273-8255 24/7'
     }
@@ -139,8 +139,8 @@ function displayscore(){
     content=document.getElementById("mood-score")
     content.innerHTML=mood;
 
-    console.log("run displayscore()");
-    console.log("score:  "+score);
+    // console.log("run displayscore()");
+    // console.log("score:  "+score);
 
 };
 // window.onload = ()=>{
@@ -210,7 +210,6 @@ function displayExistingNotes()
 
 }
 
-
 displayExistingNotes();
 
 //once clicked
@@ -257,6 +256,18 @@ function newNote()
     localStorage.setItem("notes",JSON.stringify(notesData));
 
 }
+//extract all the content and update the local storage.
+function getallnotes(){
+    let allnotes="";
+    for (let i=0;i<notesData.length;i++){
+        // console.log(notesData[i].content);
+        allnotes+=" ";
+        allnotes+=notesData[i].content;
+    }
+    // console.log(allnotes);
+    localStorage.setItem("allnotes",JSON.stringify(allnotes));
+}
+
 
 function updateTitle()
 {
@@ -274,18 +285,6 @@ function updateTitle()
     localStorage.setItem("notes",JSON.stringify(notesData));
 
 }
-//extract all the content and update the local storage.
-function getallnotes(){
-    let allnotes="";
-    for (let i=0;i<notesData.length;i++){
-        // console.log(notesData[i].content);
-        allnotes+=" ";
-        allnotes+=notesData[i].content;
-    }
-    // console.log(allnotes);
-    localStorage.setItem("allnotes",JSON.stringify(allnotes));
-}
-
 
 // this function is called when onkeyup to constantly update the local storage of user input.
 function updateContent()
